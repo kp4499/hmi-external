@@ -867,13 +867,19 @@
                         {
                             "selectorName": ".temp-class-1",
                             "sm": {
-                                "font": "16"
+                                "font-size": "16px"
                             }
                         },
                         {
                             "selectorName": ".temp-class-2",
                             "md": {
-                                "font": "23"
+                                "font-size": "23px"
+                            }
+                        },
+                        {
+                            "selectorName": ".temp-class-1",
+                            "lg": {
+                                "font-size": "64px"
                             }
                         }
                     ],
