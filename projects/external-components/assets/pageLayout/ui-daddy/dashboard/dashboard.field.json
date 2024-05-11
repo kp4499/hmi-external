@@ -881,6 +881,24 @@
                             "lg": {
                                 "font-size": "64px"
                             }
+                        },
+                        {
+                            "selectorName": ".temp-class-4",
+                            "sm": {
+                                "font": "sans-seriff"
+                            }
+                        },
+                        {
+                            "selectorName": ".temp-class-4",
+                            "md": {
+                                "font": "arial"
+                            }
+                        },
+                        {
+                            "selectorName": ".temp-class-4",
+                            "lg": {
+                                "font": "consolas"
+                            }
                         }
                     ],
                     "themeClass": ""
