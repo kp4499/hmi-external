@@ -899,6 +899,12 @@
                             "lg": {
                                 "font": "consolas"
                             }
+                        },
+                        {
+                            "selectorName": ".temp-class-5",
+                            "xs": {
+                                "font": "hevetica"
+                            }
                         }
                     ],
                     "themeClass": ""
