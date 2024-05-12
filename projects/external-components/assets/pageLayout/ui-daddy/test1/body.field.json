@@ -61,7 +61,36 @@
                 "height": null,
                 "css": {
                     "customClassName": "",
-                    "configuration": [],
+                    "configuration": [
+                        {
+                            "selectorName": ".temp-class-1",
+                            "xs": {
+                                "font": "arial",
+                                "font-size": "16px"
+                            }
+                        },
+                        {
+                            "selectorName": ".temp-class-2",
+                            "sm": {
+                                "font": "hevetica",
+                                "font-size": "24px"
+                            }
+                        },
+                        {
+                            "selectorName": ".temp-class-3",
+                            "md": {
+                                "font": "consolas",
+                                "font-size": "32px"
+                            }
+                        },
+                        {
+                            "selectorName": ".temp-class-4",
+                            "lg": {
+                                "font": "consolas",
+                                "font-size": "64px"
+                            }
+                        }
+                    ],
                     "themeClass": ""
                 },
                 "orientation": null
