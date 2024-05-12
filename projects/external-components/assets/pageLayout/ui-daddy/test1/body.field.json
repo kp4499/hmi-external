@@ -1,0 +1,73 @@
+{
+    "db-0": [
+        {
+            "baseProperties": {
+                "type": "text",
+                "id": "db-1",
+                "name": "textBox",
+                "label": "Text Box"
+            },
+            "layoutProperties": {
+                "labelPlacement": null,
+                "width": null,
+                "height": null,
+                "css": {
+                    "customClassName": "",
+                    "configuration": [],
+                    "themeClass": ""
+                },
+                "orientation": null
+            },
+            "events": [],
+            "expressionProperties": {},
+            "value": null,
+            "placeholder": null,
+            "accessor": null
+        },
+        {
+            "baseProperties": {
+                "type": "textarea",
+                "id": "db-2",
+                "name": "textArea",
+                "label": "Text Area"
+            },
+            "layoutProperties": {
+                "labelPlacement": null,
+                "width": null,
+                "height": null,
+                "css": {
+                    "customClassName": "",
+                    "configuration": [],
+                    "themeClass": ""
+                },
+                "orientation": null
+            },
+            "events": [],
+            "expressionProperties": {},
+            "value": null,
+            "placeholder": null,
+            "accessor": null
+        },
+        {
+            "baseProperties": {
+                "type": "button",
+                "id": "db-3",
+                "name": "button",
+                "label": "Button"
+            },
+            "layoutProperties": {
+                "labelPlacement": null,
+                "width": null,
+                "height": null,
+                "css": {
+                    "customClassName": "",
+                    "configuration": [],
+                    "themeClass": ""
+                },
+                "orientation": null
+            },
+            "events": [],
+            "expressionProperties": {}
+        }
+    ]
+}
