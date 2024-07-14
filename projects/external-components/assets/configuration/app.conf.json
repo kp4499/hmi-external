@@ -711,7 +711,8 @@
     },
     "data": {
       "fetchFromLocal": true,
-      "localURL": "./assets/pageLayout/ui-daddy/test4/body.data.json"
+      "localURL": "./assets/pageLayout/ui-daddy/test4/body.data.json",
+      "serverURL": []
     },
     "navField": {
       "fetchFromLocal": true,
@@ -727,7 +728,13 @@
     },
     "globalPageSettings": {
       "title": "test4",
-      "layoutProperties": null
+      "layoutProperties": {
+        "css": {
+          "customClassName": "",
+          "configuration": [],
+          "themeClass": ""
+        }
+      }
     }
   }
 }
