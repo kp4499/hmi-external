@@ -1,0 +1,18 @@
+{
+  "db-0": [
+    {
+      "baseProperties": {
+        "type": "number",
+        "id": "db-2"
+      },
+      "layoutProperties": {}
+    },
+    {
+      "baseProperties": {
+        "type": "textarea",
+        "id": "db-1"
+      },
+      "layoutProperties": {}
+    }
+  ]
+}
