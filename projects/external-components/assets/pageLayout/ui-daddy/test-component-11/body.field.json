@@ -1,0 +1,14 @@
+{
+  "test-component-11": [
+    {
+      "baseProperties": {
+        "name": "test-component-11Field",
+        "id": "test-component-11Field",
+        "type": "dynamicField",
+        "library": "primeng",
+        "formName": ""
+      },
+      "libraryComponent": "test-component-11ExternalComponent"
+    }
+  ]
+}
