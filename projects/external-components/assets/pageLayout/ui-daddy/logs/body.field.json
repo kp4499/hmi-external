@@ -1,0 +1,28 @@
+{
+  "db-0": [
+    {
+      "baseProperties": {
+        "type": "textarea",
+        "id": "db-1",
+        "name": "buildLogs",
+        "label": "Real-time Build Logs"
+      },
+      "layoutProperties": {
+        "labelPlacement": "top",
+        "width": null,
+        "height": null,
+        "css": {
+          "customClassName": "",
+          "configuration": [],
+          "themeClass": ""
+        },
+        "orientation": null
+      },
+      "events": [],
+      "expressionProperties": {},
+      "value": null,
+      "placeholder": null,
+      "accessor": null
+    }
+  ]
+}
