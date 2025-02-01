@@ -1,3 +1,4 @@
+import { TaxCalculatorFy2526Component } from './components/tax-calculator-fy25-26-external/tax-calculator-fy25-26-external.component';
 import { NgModule } from '@angular/core';
 import { PasswordExternalComponent } from './components/password-external/password-external.component';
 import { TextExternalComponent } from './components/text-external/text-external.component';
@@ -20,8 +21,7 @@ import { providePrimeNG } from 'primeng/config';
 import CustomPreset from './custom-theme';
 
 @NgModule({
-    declarations: [
-        PasswordExternalComponent,
+    declarations: [PasswordExternalComponent,
         TextExternalComponent,
         TableExternalComponent,
         FilterGroupExternalComponent,
@@ -31,11 +31,9 @@ import CustomPreset from './custom-theme';
         IframeExternalComponent,
         ListPipe,
         GenerateWithAiComponent,
-        StackblitzEditorComponent
-    ],
+        StackblitzEditorComponent, TaxCalculatorFy2526Component],
     imports: IMPORT_MODULES,
-    exports: [
-        PasswordExternalComponent,
+    exports: [PasswordExternalComponent,
         TextExternalComponent,
         TableExternalComponent,
         FilterGroupExternalComponent,
@@ -43,8 +41,7 @@ import CustomPreset from './custom-theme';
         DropdownExternal,
         IframeExternalComponent,
         ChartsExternalComponent, PasswordModule, DropdownModule,
-        GenerateWithAiComponent
-    ],
+        GenerateWithAiComponent, TaxCalculatorFy2526Component],
     providers: [
         DialogService,
         providePrimeNG({ 
