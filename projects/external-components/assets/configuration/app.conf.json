@@ -44,5 +44,25 @@
       "title": "mylogin",
       "layoutProperties": null
     }
+  },
+  "hmiAppConfiguration": {
+    "title": "MyApp",
+    "baseUrl": "",
+    "metaTags": [],
+    "linkTags": [],
+    "ifPageNotFound": "",
+    "interceptorConfigurations": [],
+    "apiConfigurations": [],
+    "layoutProperties": {
+      "labelPlacement": "top",
+      "width": null,
+      "height": null,
+      "css": {
+        "customClassName": "",
+        "configuration": [],
+        "themeClass": ""
+      },
+      "orientation": null
+    }
   }
 }
