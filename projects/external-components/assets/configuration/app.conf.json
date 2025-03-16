@@ -1,1 +1,48 @@
-{}
+{
+  "demo-app2": {
+    "headerField": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/header.field.json"
+    },
+    "headerSection": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/header.section.json"
+    },
+    "field": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/body.field.json"
+    },
+    "section": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/body.section.json"
+    },
+    "footerField": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/footer.field.json"
+    },
+    "footerSection": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/footer.section.json"
+    },
+    "data": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/body.data.json"
+    },
+    "navField": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/nav.field.json"
+    },
+    "navSection": {
+      "fetchFromLocal": true,
+      "localURL": "./assets/pageLayout/demo-app2/demo-app2/nav.section.json"
+    },
+    "authGuardConfig": {
+      "enabled": false,
+      "conditions": []
+    },
+    "globalPageSettings": {
+      "title": "demo-app2",
+      "layoutProperties": null
+    }
+  }
+}
