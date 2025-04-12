@@ -35,7 +35,7 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
       background-color: #005f73;
     }
     .dark-theme {
-      background-color: #333;
+      background-color: gray;
       color: white;
     }
   `]
