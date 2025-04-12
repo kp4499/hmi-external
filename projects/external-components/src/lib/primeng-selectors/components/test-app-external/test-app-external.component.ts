@@ -4,7 +4,7 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
 @Component({
   selector: 'app-test-app',
   template: `
-    <div style="text-align:center; margin-top: 50px; background-color: #f0f0f0; padding: 20px;">
+    <div [ngClass]="{'dark-theme': isDarkTheme}" style="text-align:center; margin-top: 50px; padding: 20px;">
       <h1>Temperature Converter</h1>
       <input type="number" [(ngModel)]="temperature" placeholder="Enter temperature" style="padding: 10px; width: 200px;"/>
       <select [(ngModel)]="unit" style="padding: 10px;">
@@ -15,6 +15,7 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
       <h2 *ngIf="convertedTemperature !== null">
         Converted Temperature: {{ convertedTemperature }} {{ targetUnit }}
       </h2>
+      <button (click)="toggleTheme()" style="padding: 10px;">Toggle Dark Theme</button>
     </div>
   `,
   styles: [`
@@ -33,6 +34,10 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
     button:hover {
       background-color: #005f73;
     }
+    .dark-theme {
+      background-color: #333;
+      color: white;
+    }
   `]
 })
 export class TestAppComponent extends CommonExternalComponent {
@@ -40,6 +45,7 @@ export class TestAppComponent extends CommonExternalComponent {
   unit: string = 'Celsius';
   convertedTemperature: number | null = null;
   targetUnit: string = '';
+  isDarkTheme: boolean = false;
 
   convert() {
     if (this.unit === 'Celsius') {
@@ -49,5 +55,9 @@ export class TestAppComponent extends CommonExternalComponent {
       this.convertedTemperature = (this.temperature - 32) * 5/9;
       this.targetUnit = 'Celsius';
     }
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }
