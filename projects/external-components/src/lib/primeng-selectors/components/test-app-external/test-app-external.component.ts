@@ -38,6 +38,9 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
       background-color: #333;
       color: white;
     }
+    :host {
+      background-color: lightgray; /* Updated background color */
+    }
   `]
 })
 export class TestAppComponent extends CommonExternalComponent {
