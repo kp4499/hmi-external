@@ -11,11 +11,11 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
         <option value="Celsius">Celsius</option>
         <option value="Fahrenheit">Fahrenheit</option>
       </select>
-      <button (click)="convert()" style="padding: 10px;">Convert</button>
+      <button (click)="convert()" style="padding: 10px; background-color: #4CAF50;">Convert</button>
       <h2 *ngIf="convertedTemperature !== null">
         Converted Temperature: {{ convertedTemperature }} {{ targetUnit }}
       </h2>
-      <button (click)="toggleTheme()" style="padding: 10px;">Toggle Dark Theme</button>
+      <button (click)="toggleTheme()" style="padding: 10px; background-color: #f44336;">Toggle Dark Theme</button>
     </div>
   `,
   styles: [`
@@ -26,13 +26,12 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
       margin: 10px;
     }
     button {
-      background-color: #008CBA;
       color: white;
       border: none;
       cursor: pointer;
     }
     button:hover {
-      background-color: #005f73;
+      opacity: 0.8;
     }
     .dark-theme {
       background-color: gray;
