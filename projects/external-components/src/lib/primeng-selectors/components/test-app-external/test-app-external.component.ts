@@ -5,7 +5,7 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
   selector: 'app-test-app',
   template: `
     <div [ngClass]="{'dark-theme': isDarkTheme}" style="text-align:center; margin-top: 50px; padding: 20px;">
-      <h1>Temperature Converter</h1>
+      <h1>Temperature Conversion Tool</h1>
       <input type="number" [(ngModel)]="temperature" placeholder="Enter temperature" style="padding: 10px; width: 200px;"/>
       <select [(ngModel)]="unit" style="padding: 10px;">
         <option value="Celsius">Celsius</option>
