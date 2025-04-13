@@ -19,11 +19,12 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
     </div>
   `,
   styles: [`
-    h1 {
-      color: #4CAF50;
+    h1, h2 {
+      color: black;
     }
     input, select {
       margin: 10px;
+      color: black;
     }
     button {
       color: white;
@@ -35,7 +36,7 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
     }
     .dark-theme {
       background-color: gray;
-      color: white;
+      color: black;
     }
   `]
 })
