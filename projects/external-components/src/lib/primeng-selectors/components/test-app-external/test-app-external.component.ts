@@ -6,8 +6,8 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
   template: `
     <div [ngClass]="{'dark-theme': isDarkTheme}" style="text-align:center; margin-top: 50px; padding: 20px;">
       <h1>Temperature Conversion Tool</h1>
-      <input type="number" [(ngModel)]="temperature" placeholder="Enter temperature" style="padding: 10px; width: 200px;"/>
-      <select [(ngModel)]="unit" style="padding: 10px;">
+      <input type="number" [(ngModel)]="temperature" placeholder="Enter temperature" style="padding: 10px; width: 200px; border: 2px solid #4CAF50; border-radius: 5px;"/>
+      <select [(ngModel)]="unit" style="padding: 10px; border: 2px solid #4CAF50; border-radius: 5px;">
         <option value="Celsius">Celsius</option>
         <option value="Fahrenheit">Fahrenheit</option>
       </select>
