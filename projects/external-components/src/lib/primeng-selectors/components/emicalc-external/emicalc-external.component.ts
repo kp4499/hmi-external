@@ -4,25 +4,25 @@ import { CommonExternalComponent } from '../common-external/common-external.comp
 @Component({
   selector: 'app-emicalc',
   template: `
-    <div style="padding: 20px; max-width: 400px; margin: auto;">
-      <h2 style="text-align: center;">EMI Calculator</h2>
+    <div style="padding: 20px; max-width: 400px; margin: auto; background-color: black;">
+      <h2 style="text-align: center; color: white;">EMI Calculator</h2>
       <form (ngSubmit)="calculateEMI()" #emiForm="ngForm">
         <div style="margin-bottom: 15px;">
-          <label for="loanAmount">Loan Amount:</label>
+          <label for="loanAmount" style="color: white;">Loan Amount:</label>
           <input type="number" id="loanAmount" [(ngModel)]="loanAmount" name="loanAmount" required style="width: 100%; padding: 8px;" />
         </div>
         <div style="margin-bottom: 15px;">
-          <label for="interestRate">Interest Rate (% per annum):</label>
+          <label for="interestRate" style="color: white;">Interest Rate (% per annum):</label>
           <input type="number" id="interestRate" [(ngModel)]="interestRate" name="interestRate" required style="width: 100%; padding: 8px;" />
         </div>
         <div style="margin-bottom: 15px;">
-          <label for="tenure">Tenure (in months):</label>
+          <label for="tenure" style="color: white;">Tenure (in months):</label>
           <input type="number" id="tenure" [(ngModel)]="tenure" name="tenure" required style="width: 100%; padding: 8px;" />
         </div>
         <button type="submit" style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none;">Calculate EMI</button>
       </form>
       <div *ngIf="emi" style="margin-top: 20px; text-align: center;">
-        <h3>Monthly EMI: {{ emi | currency }}</h3>
+        <h3 style="color: white;">Monthly EMI: {{ emi | currency }}</h3>
       </div>
     </div>
   `,
