@@ -15,6 +15,7 @@ import { StackblitzEditorComponent } from "../stackblitz-editor/stackblitz-edito
 import { DialogService } from "primeng/dynamicdialog";
 import { deepClone } from "../../util/util";
 import { DialogResult } from "../stackblitz-editor/stackblitz-editor.component";
+import { isIosDevice } from '../../util/platform';
 
 interface MessagePart {
   type: "text" | "code";
@@ -48,6 +49,7 @@ export class GenerateWithAiComponent
   previewCode: string = "";
   previewDependencies: string = "";
   currentTime!: string;
+  onIOS: boolean = isIosDevice(); // Flag to detect iOS devices
   defaultSuggestions: string[] = [
     "An EMI Calculator...",
     "A diet tracker...",
@@ -71,6 +73,8 @@ export class GenerateWithAiComponent
   isCollapsed: boolean = false;
   checkBuildEvent: any;
   downloadLogEvent: any;
+  projectId!: string | null;
+  readonly chatHistoryKey: string = 'history';
 
   constructor(
     private route: ActivatedRoute,
@@ -82,17 +86,28 @@ export class GenerateWithAiComponent
   }
 
   ngOnInit(): void {
+    this.projectId = this.route.snapshot.queryParamMap.get('projectId');
+    const history = JSON.parse(localStorage.getItem(this.chatHistoryKey) || '{}');
+    this.messages = history[this.projectId!]?.messages || this.messages;
+    this.previewCode = history[this.projectId!]?.code || '';
     this.fieldObj.value = { newMessage: "" };
     this.fieldObj.action.subscribe((actionObj: any) => {
       if (actionObj.actionType === "setfield") {
-        console.log(actionObj.data);
         this.content = actionObj.data;
         const parts = this.parseCode(this.content.response);
         this.messages.push({
           isUser: false,
           parts,
         });
-        console.log('messages ',this.messages)
+
+        if (this.projectId) {
+          history[this.projectId] = {
+            messages: this.messages,
+            code: this.getLatestCode(this.messages),
+            chatId: this.content.id
+          };
+          localStorage.setItem('history', JSON.stringify(history));
+        }
       }
 
       this.cdr.detectChanges();
@@ -188,6 +203,9 @@ export class GenerateWithAiComponent
             action.sharedData.forEach((shareDataObj: any) => {
               if (shareDataObj.staticData === "$USER_QUERY$") {
                 shareDataObj.staticData = this.messageData.newMessage;
+              }
+              if (shareDataObj.staticData === "$CHAT_ID$") {
+                shareDataObj.staticData = JSON.parse(localStorage.getItem(this.chatHistoryKey) || '{}')[this.projectId!]?.chatId || '';
               }
             });
           }
@@ -375,5 +393,18 @@ export class GenerateWithAiComponent
   }
   toggleCodeHeight(){
     this.isCollapsed = !this.isCollapsed;
+  }
+
+  getLatestCode(chatHistory: Message[]) {
+    for (let chatHistoryLength = chatHistory.length - 1; chatHistoryLength >= 0; chatHistoryLength--) {
+      const message = chatHistory[chatHistoryLength];
+      if (!message.isUser) {
+        const codePart = message.parts.find((part:any) => part.type === "code");
+        if (codePart) {
+          return codePart.content;
+        }
+      }
+    }
+    return null;
   }
 }
